@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO: Title & Meta -->
+  <title>Nath.S (buildByNath) | Aspiring Software Developer & B.Tech CSE Portfolio</title>
+  <meta name="description" content="Official portfolio of Nath.S (buildByNath), B.Tech CSE student at Ahalia School of Engineering and Technology, Palakkad. Stack: Python, React, JavaScript, SQL." />
+  <link rel="canonical" href="https://buildbynath.in/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- SEO: Open Graph Tags -->
+  <meta property="og:title" content="Nath.S (buildByNath) | Aspiring Software Developer" />
+  <meta property="og:description" content="Official portfolio of Nath.S (buildByNath), B.Tech CSE student at Ahalia School of Engineering and Technology, Palakkad. Stack: Python, React, JavaScript, SQL." />
+  <meta property="og:url" content="https://buildbynath.in/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://buildbynath.in/src/avatar.jpg" />
+  <meta property="og:image:alt" content="Nath.S (buildByNath) - Aspiring Software Developer" />
+  <meta property="og:image:type" content="image/jpeg" />
+
+  <!-- SEO: Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nath.S (buildByNath) | Aspiring Software Developer" />
+  <meta name="twitter:description" content="Official portfolio of Nath.S (buildByNath), B.Tech CSE student at Ahalia School of Engineering and Technology, Palakkad. Stack: Python, React, JavaScript, SQL." />
+  <meta name="twitter:image" content="https://buildbynath.in/src/avatar.jpg" />
+  <meta name="twitter:image:alt" content="Nath.S (buildByNath) - Aspiring Software Developer" />
+
+  <!-- SEO: JSON-LD Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nath.S",
+    "alternateName": [
+      "Nath S",
+      "buildByNath"
+    ],
+    "url": "https://buildbynath.in/",
+    "image": "https://buildbynath.in/src/avatar.jpg",
+    "jobTitle": "Aspiring Software Developer",
+    "description": "Nath.S (buildByNath) is an Aspiring Software Developer and B.Tech CSE student at Ahalia School of Engineering and Technology, Palakkad, Kerala specializing in Python, React, JavaScript, and SQL.",
+    "email": "mailto:nathofficial06@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Palakkad",
+      "addressRegion": "Kerala",
+      "addressCountry": "IN"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Ahalia School of Engineering and Technology, Palakkad",
+      "url": "https://ahalia.ac.in/"
+    },
+    "knowsAbout": [
+      "Python",
+      "React",
+      "JavaScript",
+      "SQL",
+      "Full-Stack Web Development",
+      "Artificial Intelligence",
+      "REST APIs"
+    ],
+    "sameAs": [
+      "https://github.com/buildByNath",
+      "https://www.linkedin.com/in/nath-s06/",
+      "https://www.instagram.com/nath.io_/"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body data-theme="emerald">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- Custom Cursor Glow -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Interactive Canvas Background -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+  <div class="ambient-orb orb-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Nath</span>
+        <span class="logo-tag">.io</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#socials" class="nav-link">Connect</a>
+        <a href="mailto:nathofficial06@gmail.com" class="nav-link cta-link">nathofficial06@gmail.com</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Palette Switcher (commented out for clean, professional look)
+        <div class="theme-switcher" title="Change Accent Glow">
+          <button class="theme-btn theme-cyan active" data-color="cyan" aria-label="Cyan Theme"></button>
+          <button class="theme-btn theme-purple" data-color="purple" aria-label="Purple Theme"></button>
+          <button class="theme-btn theme-emerald" data-color="emerald" aria-label="Emerald Theme"></button>
+        </div>
+        -->
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-indicator"></span>
+            <span class="status-text">Open to projects & collaboration</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="greeting">Hey there, I'm</span>
+            <span class="gradient-name">Nath.S</span>
+            <span class="alias">(buildByNath)</span>
+          </h1>
+
+          <div class="typewriter-container">
+            <span class="type-prefix">Building&nbsp;</span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="type-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            I'm Nath.S (Nath S / buildByNath), an Aspiring Software Developer and B.Tech CSE student at Ahalia School of Engineering and Technology, Palakkad, Kerala. I build clean, logical full-stack web and AI-powered applications using Python, React, JavaScript, and SQL to solve real-world problems.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+            <a href="#socials" class="btn btn-glass">
+              <span>Find Me Online</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1-2 2 2 2 0 0 1 2-2z"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">B.Tech CSE</span>
+              <span class="stat-label">ASET, Palakkad</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">Core Stack</span>
+              <span class="stat-label">Python • React • JS • SQL</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">Full-Stack</span>
+              <span class="stat-label">Web & AI Solutions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="interactive-card" id="tiltCard">
+            <div class="card-glass-glow"></div>
+            <div class="card-content">
+              <div class="avatar-ring">
+                <img src="src/avatar.jpg" alt="Nath.S (buildByNath) - Aspiring Software Developer and B.Tech CSE student portfolio photo" class="hero-avatar" />
+              </div>
+              <div class="card-user-name">Nath.S</div>
+              <p class="card-user-role">Aspiring Software Developer | B.Tech CSE</p>
+
+              <div class="code-pill-list">
+                <span class="code-pill">Python</span>
+                <span class="code-pill">React</span>
+                <span class="code-pill">JavaScript</span>
+                <span class="code-pill">SQL</span>
+              </div>
+
+              <div class="live-status-box">
+                <div class="status-dot-glow"></div>
+                <span class="live-activity-text">Building full-stack web applications & AI tools</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About</span>
+          <h2 class="section-title">Developer & Student</h2>
+          <p class="section-subtitle">What I study, how I build, and the tools I work with daily.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-card glass-panel">
+            <h3 class="panel-heading">Background & Approach</h3>
+            
+            <div class="about-bio-copy">
+              <p>
+                <strong>Nath.S (buildByNath)</strong> is an <strong>Aspiring Software Developer</strong> and <strong>B.Tech CSE</strong> undergraduate at <strong>Ahalia School of Engineering and Technology, Palakkad, Kerala</strong>. I build scalable full-stack web applications and AI-powered tools using <strong>Python, React, JavaScript, and SQL</strong>.
+              </p>
+              <p>
+                I focus on clean user interfaces, reliable backend APIs, and efficient database design—prioritizing clear logic and maintainable code to solve practical problems.
+              </p>
+            </div>
+
+            <div class="about-features">
+              <div class="feature-item">
+                <div class="feature-icon">💻</div>
+                <div class="feature-content">
+                  <h4>Full-Stack Web Development</h4>
+                  <p>Responsive React & JavaScript frontends paired with scalable Python and Node.js APIs.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">🗄️</div>
+                <div class="feature-content">
+                  <h4>SQL & Database Architecture</h4>
+                  <p>Structured relational databases, optimized SQL queries, and clean data modeling.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-content">
+                  <h4>AI-Powered & Applied Solutions</h4>
+                  <p>Integrating intelligent automation and AI workflows into practical web apps.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Code Terminal Card -->
+          <div class="terminal-card glass-panel">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">nath@system: ~/profile.json</div>
+            </div>
+            <div class="terminal-body">
+              <pre><code><span class="syn-keyword">const</span> <span class="syn-var">developer</span> = {
+  <span class="syn-prop">name</span>: <span class="syn-str">"Nath.S"</span>,
+  <span class="syn-prop">handle</span>: <span class="syn-str">"@buildByNath"</span>,
+  <span class="syn-prop">role</span>: <span class="syn-str">"Aspiring Software Developer"</span>,
+  <span class="syn-prop">education</span>: <span class="syn-str">"B.Tech CSE — ASET, Palakkad"</span>,
+  <span class="syn-prop">techStack</span>: [
+    <span class="syn-str">"Python"</span>,
+    <span class="syn-str">"React"</span>,
+    <span class="syn-str">"JavaScript"</span>,
+    <span class="syn-str">"SQL"</span>
+  ],
+  <span class="syn-prop">focusAreas</span>: [
+    <span class="syn-str">"Full-Stack Web Apps"</span>,
+    <span class="syn-str">"AI-Powered Solutions"</span>,
+    <span class="syn-str">"Database & API Systems"</span>
+  ],
+  <span class="syn-prop">website</span>: <span class="syn-str">"buildbynath.in"</span>,
+  <span class="syn-prop">isOpenToConnect</span>: <span class="syn-bool">true</span>
+};
+
+<span class="syn-comment">// Output:</span>
+<span class="syn-func">console</span>.<span class="syn-func">log</span>(<span class="syn-str">"Ready to build and collaborate."</span>);</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Skills</span>
+          <h2 class="section-title">Technical Stack</h2>
+          <p class="section-subtitle">Languages, frameworks, and tools used across my projects.</p>
+        </div>
+
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">All Stack</button>
+          <button class="filter-btn" data-filter="frontend">Frontend & UI</button>
+          <button class="filter-btn" data-filter="backend">Backend & Logic</button>
+          <button class="filter-btn" data-filter="systems">Tools & Architecture</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <div class="skill-card glass-panel" data-category="frontend">
+            <div class="skill-icon-wrap">⚛️</div>
+            <div class="skill-info">
+              <h3>React & JavaScript</h3>
+              <p>Component-driven user interfaces, state management, and modern ES6+ features.</p>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="backend">
+            <div class="skill-icon-wrap">🐍</div>
+            <div class="skill-info">
+              <h3>Python</h3>
+              <p>Backend API logic, data processing scripts, automation tasks, and AI integrations.</p>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="backend">
+            <div class="skill-icon-wrap">🗄️</div>
+            <div class="skill-info">
+              <h3>SQL & Relational Databases</h3>
+              <p>Schema design, structured queries, joins, and data persistence.</p>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="frontend">
+            <div class="skill-icon-wrap">🎨</div>
+            <div class="skill-info">
+              <h3>HTML5 & Modern CSS</h3>
+              <p>Clean semantic markup, Flexbox, CSS Grid layouts, and responsive styling.</p>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="backend">
+            <div class="skill-icon-wrap">🟢</div>
+            <div class="skill-info">
+              <h3>Node.js & Express</h3>
+              <p>Server-side API endpoints, routing, and lightweight services.</p>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="systems">
+            <div class="skill-icon-wrap">🌐</div>
+            <div class="skill-info">
+              <h3>RESTful APIs & Backend Architecture</h3>
+              <p>Designing structured API endpoints, request routing, authentication, and services.</p>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="systems">
+            <div class="skill-icon-wrap">🛠️</div>
+            <div class="skill-info">
+              <h3>Git & GitHub</h3>
+              <p>Branch management, version control, repository organization, and collaboration.</p>
+            </div>
+          </div>
+
+          <div class="skill-card glass-panel" data-category="frontend">
+            <div class="skill-icon-wrap">📱</div>
+            <div class="skill-info">
+              <h3>UI/UX & Responsive Web Design</h3>
+              <p>Mobile-first layout systems, intuitive navigation, accessibility, and clean interface design.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Work</span>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">Working codebases and web applications with active repositories on GitHub.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: SchemeFit -->
+          <div class="project-card glass-panel">
+            <div class="project-header">
+              <span class="project-category">Hackathon Project • Full-Stack</span>
+              <div class="project-links">
+                <a href="https://github.com/buildByNath/schemefit" target="_blank" rel="noopener noreferrer" class="icon-link" title="SchemeFit on GitHub">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">SchemeFit — Welfare Scheme Matcher & Auto-Filler</h3>
+            <p class="project-desc">
+              Addresses the challenge citizens face discovering public welfare schemes. The platform matches user profiles against eligibility criteria, generates pre-filled application PDFs, and includes a Chrome extension for automated form filling.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Next.js 16</span>
+              <span class="tag">React 19</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Chrome Extension</span>
+            </div>
+          </div>
+
+          <!-- Project 2: TruthLens (AI News) -->
+          <div class="project-card glass-panel">
+            <div class="project-header">
+              <span class="project-category">Hackathon Project • AI Backend</span>
+              <div class="project-links">
+                <a href="https://github.com/buildByNath/ai_news" target="_blank" rel="noopener noreferrer" class="icon-link" title="TruthLens on GitHub">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">TruthLens — Fake News & Claim Verifier</h3>
+            <p class="project-desc">
+              Tackles digital misinformation by analyzing news articles and public claims. The backend extracts core assertions, performs cross-referencing via Generative AI APIs, and delivers real-time credibility scoring.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">Generative AI</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Fact Verification</span>
+            </div>
+          </div>
+
+          <!-- Project 3: LogicNum Decoder -->
+          <div class="project-card glass-panel">
+            <div class="project-header">
+              <span class="project-category">Android App • Logic Game</span>
+              <div class="project-links">
+                <a href="https://github.com/buildByNath/LogicNumDecoder" target="_blank" rel="noopener noreferrer" class="icon-link" title="LogicNumDecoder on GitHub">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">LogicNum Decoder — Number Deduction Puzzle</h3>
+            <p class="project-desc">
+              A native logic and deduction puzzle game developed for Android. Challenges players to crack hidden numeric codes with customizable digit lengths, time-attack mode, reactive UI state, and eye-protective dark themes.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Kotlin</span>
+              <span class="tag">Jetpack Compose</span>
+              <span class="tag">Android SDK</span>
+              <span class="tag">State Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIALS SECTION -->
+    <section class="section socials-section" id="socials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Network</span>
+          <h2 class="section-title">Connect With Me</h2>
+          <p class="section-subtitle">Direct links to my GitHub repositories, LinkedIn profile, and updates.</p>
+        </div>
+
+        <div class="socials-grid">
+          <!-- GITHUB CARD -->
+          <a href="https://github.com/buildByNath" target="_blank" rel="noopener noreferrer" class="social-card github-card glass-panel">
+            <div class="social-glow"></div>
+            <div class="social-icon-box">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </div>
+            <div class="social-details">
+              <span class="social-platform">GitHub</span>
+              <h3 class="social-handle">@buildByNath</h3>
+              <p class="social-desc">Public code repositories, student projects, and open-source explorations.</p>
+            </div>
+            <div class="social-action-btn">
+              <span>Open GitHub</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </div>
+          </a>
+
+          <!-- LINKEDIN CARD -->
+          <a href="https://www.linkedin.com/in/nath-s06/" target="_blank" rel="noopener noreferrer" class="social-card linkedin-card glass-panel">
+            <div class="social-glow"></div>
+            <div class="social-icon-box">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </div>
+            <div class="social-details">
+              <span class="social-platform">LinkedIn</span>
+              <h3 class="social-handle">nath-s06</h3>
+              <p class="social-desc">Academic milestones, technical experience, and professional networking.</p>
+            </div>
+            <div class="social-action-btn">
+              <span>Open LinkedIn</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </div>
+          </a>
+
+          <!-- INSTAGRAM CARD -->
+          <a href="https://www.instagram.com/nath.io_/" target="_blank" rel="noopener noreferrer" class="social-card instagram-card glass-panel">
+            <div class="social-glow"></div>
+            <div class="social-icon-box">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <div class="social-details">
+              <span class="social-platform">Instagram</span>
+              <h3 class="social-handle">@nath.io_</h3>
+              <p class="social-desc">Behind-the-scenes building, campus updates, and casual snapshots.</p>
+            </div>
+            <div class="social-action-btn">
+              <span>Open Instagram</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / COLLABORATION SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-cta-card glass-panel">
+          <div class="contact-badge">
+            <span class="status-indicator"></span>
+            <span>Let's Build Together</span>
+          </div>
+
+          <h2 class="contact-title">Have a project in mind or want to collaborate?</h2>
+          <p class="contact-subtitle">
+            Whether you want to collaborate on full-stack web and AI projects, discuss software engineering opportunities, or simply share thoughts, feel free to reach out directly.
+          </p>
+
+          <div class="email-action-group">
+            <a href="mailto:nathofficial06@gmail.com" class="email-pill-btn" title="Send email via mail client">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <span class="email-text">nathofficial06@gmail.com</span>
+              <svg class="email-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V8H8"/>
+              </svg>
+            </a>
+
+            <button type="button" class="btn-copy-email" id="copyEmailBtn" aria-label="Copy Email Address" title="Copy to clipboard">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span id="copyText">Copy</span>
+            </button>
+          </div>
+
+          <div class="contact-meta">
+            <span class="meta-item">📍 Palakkad, Kerala</span>
+            <span class="meta-divider">•</span>
+            <span class="meta-item">⚡ Direct response to all inquiries</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-logo">buildbynath.in</span>
+        <p class="footer-copy">Crafted with clean code, logical thinking & curiosity.</p>
+      </div>
+
+      <div class="footer-center">
+        <div class="footer-social-icons">
+          <a href="https://github.com/buildByNath" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nath-s06/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/nath.io_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <span class="year-stamp">© <span id="currentYear"></span> Nath.S (buildByNath) — buildbynath.in</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="src/script.js"></script>
+</body>
+</html>
